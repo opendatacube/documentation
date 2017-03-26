@@ -67,6 +67,33 @@
 ### Remote access / Task descriptor
 
 ### Managed Replica
+Managed Replica Service: Client and server model with tracking
+
+Proposal state: Mature. The plan has been considered in the context of business and user requirements.
+Implementation state: Embyronic. Further detail requiried around functions and implementation specifics.
+
+Server:
+* tracks sub-cubes through linked data / provenance methods
+* answer queries about holdings
+* return a dry-run of results from a sub-cube request (list data and database)
+* return results from a sub-cube request in the native format of the server (data and database)
+
+Client
+* connect to a server
+* request holdings from a server
+* request a sub-cube (including dry-run)
+* translate results into local environment (data and database)
+  * requires an extensible framework for multiple types of translations
+* request an update to a sub-cube
+
+Tracking
+* implement a lean linked data model
+* server tracks sub-cubes
+  * push notifications of data/database updates to clients of relevant sub-cubes
+* client requests update to sub-cube
+* a sub-cube can be sub-cubed
+  * linked data model links sub-sub-cube to server
+  * a sub-cube always knows its parent cube
 
 ### User Interfaces
 
