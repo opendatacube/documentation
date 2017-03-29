@@ -27,6 +27,11 @@
   * how to add new ones
   * how to edit scope and interfaces
 
+* Release management
+  * how to coordinate releases of stable code
+  * small sub-committee tasked to do the necessary checks and balances
+  * how to manage the 'selecting and joining' of components into a release
+
 ## Components and Interfaces
 * high level purpose or scope statements can be taken from https://docs.google.com/document/d/1Bjt_mjT9SPUbOB5V-t5eQnc94XEQI__Co4lCqTQekkE/edit?usp=sharing
 
