@@ -1,5 +1,9 @@
 # Components and Interfaces
 
+* this document will likely need to evolve from a flat document to an overview and a set of documents
+  * one for each component?
+  * current and proposed details?
+
 ## Purpose and Goals
 
 * this is a template, can be edited
@@ -10,7 +14,7 @@
 * at the beginning this template can be used to map current components into a modular view
 * as requirements dictate, this template can be used to build components as modules
   * feature gaps, capability enhancements or extension points
-  * new modules may evolve from teh existing code or be started fresh in a copy-and-paste manner from existing code
+  * new modules may evolve from the existing code or be started fresh in a copy-and-paste manner from existing code
 
 ## Outstanding questions
 
