@@ -57,7 +57,7 @@
 * Analytics
 * Execution
 
-### Output
+### Output Formatter
 * file write, various formats
 
 ### OGC
@@ -72,6 +72,7 @@
 * gridworkflow
 * direct DB and file access
 * use functions to inform AE/EE
+* links to/from CMI
 
 ### Remote access / Task descriptor
 
