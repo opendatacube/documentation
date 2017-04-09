@@ -9,8 +9,7 @@ limiting factor. Extensive research and development activity has delivered new d
 
 Addressing this challenge is difficult for advanced economies and even more challenging for developing countries with an interest in using EO satellite data. It is simply not technically feasible or financially affordable to consider traditional local processing and data distribution methods (e.g. scene-based file download over the internet) to address this “scaling” challenge in many economies, as the size of the data and complexities in preparation, handling, storage, and analysis remain significant obstacles. 
 
-Fortunately, just as satellite Earth observation technology has advanced significantly, so too has information technology. The data management and analysis challenges arising from the huge increase in free and open data volumes can be overcome with new computing infrastructures, technologies and data architectures, such as the “Open Data Cube”. Such a solution has great potential to streamline data distribution and management for providers while simultaneously lowering the technical barriers for
-users to exploit the data to its full potential.
+Fortunately, just as satellite Earth observation technology has advanced significantly, so too has information technology. The data management and analysis challenges arising from the huge increase in free and open data volumes can be overcome with new computing infrastructures, technologies and data architectures, such as the “Open Data Cube”. Such a solution has great potential to streamline data distribution and management for providers while simultaneously lowering the technical barriers forusers to exploit the data to its full potential.
 
 Purpose
 
@@ -18,15 +17,15 @@ The Committee on Earth Observation Satellites (CEOS) has started the Open Data C
 
 As the world is developing, so is its knowledge and demand for EO satellite data. The primary problems for users are data access, data preparation, and efficient analyses to support user applications. CEOS, through its network of global connections, has determined that global users share many common desires (listed below) that can be met through the ODC initiative. These user needs, support the purpose of the ODC.
 
-♣	Minimize time and scientific knowledge required to access and prepare satellite data
-♣	Free and open EO satellite data and application algorithms
-♣	Open source software solutions that are advanced through community contributions
-♣	Consistent data architectures that allow sharing of code, tools and algorithms
-♣	Efficient time series analyses to support land change applications
-♣	Use of multiple datasets together (e.g., interoperability and complementarity)
-♣	Use of common GIS tools (e.g. QGIS, ArcGIS)
-♣	Local and regional solutions that avoid commercial and internet dependence 
-♣	Sustained customer service and user support 
+*	Minimize time and scientific knowledge required to access and prepare satellite data
+*	Free and open EO satellite data and application algorithms
+*	Open source software solutions that are advanced through community contributions
+*	Consistent data architectures that allow sharing of code, tools and algorithms
+*	Efficient time series analyses to support land change applications
+*	Use of multiple datasets together (e.g., interoperability and complementarity)
+*	Use of common GIS tools (e.g. QGIS, ArcGIS)
+*	Local and regional solutions that avoid commercial and internet dependence 
+*	Sustained customer service and user support 
 
 Vision
 
@@ -45,15 +44,15 @@ Implementation
 
 We have now defined the purpose and vision for the ODC, but none of it is possible without an implementation plan. How do we reach our goals and build and sustain an ODC architecture and community? These steps are listed below. 
 
-♣	Develop instructions and scripts to obtain and/or produce ARD 
-♣	Create and manage an open source repository (e.g. GitHub) to host ODC content
-♣	Develop an ODC installation package with sample inputs and outputs
-♣	Develop an ODC Learning Center with documentation and training tools
-♣	Create a user forum to share code and algorithms and obtain support  
-♣	Host common application algorithms desired by users (e.g. mosaics, water detection, change detection)
-♣	Engage stakeholder organizations (e.g. GEO, World Bank, SERVIR) to identify country needs and provide infrastructure and funds for implementation
-♣	Conduct pilot studies to test approaches and provide user feedback
-♣	Develop a group of globally distributed Python programmers who are able to support local deployment and customer support
+*	Develop instructions and scripts to obtain and/or produce ARD 
+*	Create and manage an open source repository (e.g. GitHub) to host ODC content
+*	Develop an ODC installation package with sample inputs and outputs
+*	Develop an ODC Learning Center with documentation and training tools
+*	Create a user forum to share code and algorithms and obtain support  
+*	Host common application algorithms desired by users (e.g. mosaics, water detection, change detection)
+*	Engage stakeholder organizations (e.g. GEO, World Bank, SERVIR) to identify country needs and provide infrastructure and funds for implementation
+*	Conduct pilot studies to test approaches and provide user feedback
+*	Develop a group of globally distributed Python programmers who are able to support local deployment and customer support
 
 Conclusion
 
