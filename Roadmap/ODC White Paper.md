@@ -1,62 +1,62 @@
 # The CEOS Open Data Cube Initiative
 
+A white paper to summarize the purpose, vision and implementation steps required to achieve an Open Data Cube (ODC) architecture and community that provides value to global Earth observation (EO) satellite data users and increases the impact of EO satellite data.  
 
-This white paper is meant to provide the background, purpose, vision and implementation steps required to achieve an Open Data Cube community that provides value to global satellite data users and increases the impact of satellite data.  
+Background
 
-_Outline is below ... no more than 3-5 pages in the end, or people will NOT read it. Shorter is better._
+With each passing year, new generations of EO satellites are creating increasingly significant volumes of data with such comprehensive global coverage that for many applications, the lack of data is no longer a
+limiting factor. Extensive research and development activity has delivered new data applications that offer significant potential to deliver great impact to important environmental, economic and social challenges, including at the local, regional and global scales. Such applications highlight the value of EO, though the challenge is in providing the proper connections between data, applications and users. Even today, much archived EO satellite data is underutilised despite modern computing and analysis infrastructures. 
 
-## Background
-Content from the FDA report and the Global Data Flows report that points toward Data Cubes ... How did we get to this point? Why do we need Data Cubes? Since 2007 we now have lots of free data, technology is moving rapidly, countries are developing, and they want satellite data! 
+Addressing this challenge is difficult for advanced economies and even more challenging for developing countries with an interest in using EO satellite data. It is simply not technically feasible or financially affordable to consider traditional local processing and data distribution methods (e.g. scene-based file download over the internet) to address this “scaling” challenge in many economies, as the size of the data and complexities in preparation, handling, storage, and analysis remain significant obstacles. 
 
-## Purpose
-The world is gaining knowledge of the value of satellite data and they want to use it. This is evident through the success of Google Earth Engine and Amazon Web Services. The primary problems for users are data access, data preparation, and efficient analyses. Our purpose is to answer the needs of global users and this is what they commonly desire ... 
+Fortunately, just as satellite Earth observation technology has advanced significantly, so too has information technology. The data management and analysis challenges arising from the huge increase in free and open data volumes can be overcome with new computing infrastructures, technologies and data architectures, such as the “Open Data Cube”. Such a solution has great potential to streamline data distribution and management for providers while simultaneously lowering the technical barriers for
+users to exploit the data to its full potential.
 
-*	Users want to minimize the time and knowledge required to obtain and prepare satellite data
-*	Users want free data and open source solutions.
-*	Users want to perform time series analyses
-*	Users want to use multiple datasets together
-*	Users want to use their common GIS tools
-*	Users want to “own” the data and keep it locally
-* Users want customer service and help
+Purpose
 
-## Vision
-Our goal is to provide a *SOLUTION* that has *VALUE* and increase the *IMPACT* of satellite data.
-Our goal is *NOT* to sell a product or give out a tool.
+The Committee on Earth Observation Satellites (CEOS) has started the Open Data Cube (ODC) initiative to provide a data architecture solution that has value to its users and increases the impact of EO satellite data. Similar data architectures, such as Google Earth Engine (GEE), have transformed the EO satellite data user community. Their response to user demand has created a technological solution that removes the burden of data preparation, yields rapid results, and maintains an active global community of contributors. The ODC needs to duplicate many of these outcomes, but not the infrastructure. Hence, CEOS is committed to sustain and grow the ODC to meet the targeted needs of users in ways that differ from solutions such as GEE.
 
-A solution supporting CEOS objectives …
-*	Build capability of users to apply CEOS Agency data
-*	Supporting priority CEOS/GEO agendas (UN-SDGs, Paris and Sendai)
-CEOS Agencies wanting to participate …
-*	Through provision of Analysis Ready Data (ARD) products.
-*	Contributing to development and uptake of solution.
-Customers feel that they are the focus … 
-*	Training materials and easy installation/maintenance.
-*	A “CEOS Open Data Cube” brand that people know and trust
-Scalable solution …
-*	Supporting Data Cubes in 20 countries by 2022.
-*	Key partners (e.g. FAO, World Bank) back ODC projects.
-An active Data Cube community …  
-*	Users helping each other and open source contributions
+As the world is developing, so is its knowledge and demand for EO satellite data. The primary problems for users are data access, data preparation, and efficient analyses to support user applications. CEOS, through its network of global connections, has determined that global users share many common desires (listed below) that can be met through the ODC initiative. These user needs, support the purpose of the ODC.
 
-## Implementation Steps
-What are the steps needed to reach our goals? Build and sustain an Open Data Cube community based on ARD, open source tools, and customer support. 
+♣	Minimize time and scientific knowledge required to access and prepare satellite data
+♣	Free and open EO satellite data and application algorithms
+♣	Open source software solutions that are advanced through community contributions
+♣	Consistent data architectures that allow sharing of code, tools and algorithms
+♣	Efficient time series analyses to support land change applications
+♣	Use of multiple datasets together (e.g., interoperability and complementarity)
+♣	Use of common GIS tools (e.g. QGIS, ArcGIS)
+♣	Local and regional solutions that avoid commercial and internet dependence 
+♣	Sustained customer service and user support 
 
-* Develop instructions and scripts to obtain and/or produce ARD 
-* Develop a simple Data Cube installation package and sample inputs/outputs
-* Develop a Learning Center with documentation and training tools
-* Create and manage an open source repository (Open Data Cube)
-* Create a user forum that allows users to share ideas and "support themselves" 
-* Obtain common application algorithms that are attractive to users (e.g. mosaics, water, forests, agriculture, change detection)
-* Engage "other" organizations (e.g. World Bank, SERVIR) to identify country needs and provide infrastructure and funds to implement
-* Conduct several CEOS-led pilot studies to test approaches and provide feedback
-* Develop a group of globally distributed Python programmers who are able to support deployment and customer support
+Vision
 
-**Google Earth Engine (GEE) is a perfect analogy:** They have transformed the satellite data user 
-community. What are they doing right? Very active user forums with fast responses to questions, frequent training workshops, listening to customers and giving them the information they want, removes burden of data preparation and yields rapid results. We need to duplicate many of these outcomes, but not their infrastructure.
-**How can the CEOS Data Cube be different, but deliver what is important?** CEOS commitment to sustain and grow the ODC, enable local and regional deployment (users want data control), expanded datasets with provisions for ARD (key CEOS value-add, beyond GEE), proven methods for data interoperability (not often discussed in GEE), user interface tools (avoids need for user programming like GEE), customer service that goes beyond the standard user forum!
+The purpose of the ODC is to provide a solution that has value and increases the impact of satellite data.
+Our goal is not to sell a product or give out another tool. CEOS believes the ODC is a solution that supports its key objectives, which includes the desire to build the capability of users to apply their EO satellite data and to support global priority agendas, such as those found in the United Nations Sustainable Development Goals (UN-SDG) and the Paris and Sendai Agreements. In addition, CEOS Agencies desire to participate in the ODC through the provision of Analysis Ready Data (ARD) and by contributing to the development of the ODC architecture and its uptake.  
 
-## Looking Ahead
-What do we see as the **challenges** ... acceptance and scaleability. Will CEOS Agencies (and Working Groups) and the key stakeholders agree that this vision is achievable and worth contributing to? Do we have the required people, money and structures to reach our goals? How do we engage the "other" organizations to grow the number of countries using Data Cubes? How do we grow the user community to attract contributions and country expansion? 
+In order to ensure success, the ODC must be a known “brand” that users can trust and it must promote a positive user experience. This is only possible through the development of an open source ODC community that contributes to the core code, shares algorithms and provides support to each other for the resolution of problems. 
 
-CEOS is the ideal group to develop and sustain an Open Data Cube solution. CEOS has the data and we know how to produce ARD, CEOS has the connections with key international groups and stakeholders, and CEOS has proven it can work. Now we just need to go global. 
+With this vision, comes challenges, such as acceptance and scalability. Will EO satellite data providers and key global stakeholders agree that the ODC vision is achievable and worth their contribution? CEOS has utilised prototype efforts to demonstrate the functionality and impact of the ODC and has reached out to global stakeholders (e.g. GEO, World Bank, SERVIR, AWS) to explore common objectives. Global interest in the ODC initiative has been promising and CEOS is making progress toward “acceptance” of the ODC as a trusted solution with user value. 
 
+How does this solution scale to meet the demand of many global users given limited resources? This scalability challenge is daunting and one of the most criticized elements of the ODC. Though our initial efforts have only resulted in 3 national data cubes (e.g. Australia, Colombia, Switzerland), there are many more countries with high interest. It is our goal to reach 20 country-level operational data cubes by 2020. This goal will not be achieved by CEOS alone, but will engage a number of other organizations and current users to achieve the goal. 
+
+Through partnerships with global stakeholders, it will be possible to utilize their funds and existing projects to deploy data cubes in countries and demonstrate their potential to meet the needs of their projects, both efficiently and effectively. For example, World Bank has a high interest in the ODC to support a number of global water management projects. These projects use satellite data, but there is a lack of consistency and significant challenges with data preparation. Similarly, SERVIR is investigating the use of data cubes at its global regional data hubs. Should they determine the ODC is an acceptable and beneficial option for their local users, this would result in many more country-level data cubes, as their hubs serve many countries. Through our current national data cube users, we can utilize their skills and lessons to support deployments in other countries. For example, Switzerland is considering a capacity building project in the Middle East that may result in 2 new country-level data cubes where they will provide the user support for deployment and training. Finally, CEOS, through its Agencies and supporting groups (e.g. CEOS Systems Engineering Office) will support deployment and training for new country data cubes. Most recently, CSIRO has invested in a Python programmer to support Australian industry use of their data cube and to support data cube deployment to other countries in the Asia-Australia region. 
+
+Implementation
+
+We have now defined the purpose and vision for the ODC, but none of it is possible without an implementation plan. How do we reach our goals and build and sustain an ODC architecture and community? These steps are listed below. 
+
+♣	Develop instructions and scripts to obtain and/or produce ARD 
+♣	Create and manage an open source repository (e.g. GitHub) to host ODC content
+♣	Develop an ODC installation package with sample inputs and outputs
+♣	Develop an ODC Learning Center with documentation and training tools
+♣	Create a user forum to share code and algorithms and obtain support  
+♣	Host common application algorithms desired by users (e.g. mosaics, water detection, change detection)
+♣	Engage stakeholder organizations (e.g. GEO, World Bank, SERVIR) to identify country needs and provide infrastructure and funds for implementation
+♣	Conduct pilot studies to test approaches and provide user feedback
+♣	Develop a group of globally distributed Python programmers who are able to support local deployment and customer support
+
+Conclusion
+
+CEOS is the ideal group to develop and sustain an Open Data Cube solution. CEOS has the data, they understand how to produce ARD, they have the technical expertise (e.g. Agencies, SEO, Working Groups), they have the connections with key international groups and stakeholders, and they have proven the it can work through the Australian Geoscience Data Cube (AGDC) and recent functioning ODC prototypes in Colombia and Switzerland. Though acceptance and scaleability remain as the primary challenges, the vision of the ODC can still be accomplished. Such success will increase the use of EO satellite data and provide unquestionable value to global users.
+
+For more information, visit: www.opendatacube.org
