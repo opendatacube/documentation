@@ -67,6 +67,7 @@
 * consistency
 * upgrade/update schema
 * (links to Managed Replica)
+* incorporate circles-plot code from Li Lingtao (csiro) as an available tool/app (see Matt)
 
 ### NCI / v1-ish workflows
 * gridworkflow
