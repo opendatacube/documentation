@@ -10,13 +10,16 @@ Use this document as a reference and guide to:
 
 ## Open Data Cube Website
 www.opendatacube.org
+
 (Also http://opendatacube.github.oi - should we use this as well / instead, or perhaps as the wiki end point?)
 * Public read
 * Write restricted to content (communication) managers
 
 ### Mission statement
-What is ODC.
+What is ODC
+
 Key partners and principal agencies
+
 How to join the community
 
 ### Examples
@@ -29,12 +32,14 @@ Australia, SEO demos, Colombia, Vietnam, Switzerland, etc
 Past and upcoming, public and invited
 
 ### External users
+?? (not sure what this means)
 
 ### Private ODC docs
 Common, reusable and current presentation materials
 
 ## Google groups
 https://groups.google.com/forum/#!forum/opendatacube
+
 opendatacube@googlegroups.com
 * Public read
 * Sending of notices restricted to community members. Anyone can request access. Moderator/admin members will confirm/deny access
@@ -44,6 +49,7 @@ opendatacube@googlegroups.com
 
 ### Questions to the community
 Broad questions to the community.
+
 Technical questions can be sent here but slack preferred for a more timely response from developers.
 
 ## Gmail
@@ -52,7 +58,9 @@ opendatacube@gmail.com
 
 ### Admin account
 Admin account for a number of these services
+
 **Not** a general contact email address for the community
+
 Use google groups, slack or direct emails (e.g. to agency principals) to contact the community
 
 ## Slack
@@ -76,6 +84,7 @@ Open Data Cube code
 
 ### Issues and milestones
 Issue tracking across all repositories
+
 We don't use milestones yet but we may do in the future
 
 ### Code examples
@@ -85,7 +94,8 @@ Jupyter notebooks
 Governance documents
 * ODC white paper
 * Steering council
-Community doucments
+
+Community documents
 * Components and interfaces
 * Communication channels
 * FAQ (or should this be in readthedocs?)
@@ -104,4 +114,4 @@ http://datacube-core.readthedocs.io/en/latest/
 ## Social media?
 * Not available presently
 * Youtube, twitter, facebook?
-* Does ODC want a social media presences or will it rely on agency accounts?
+* Does ODC want a social media presence or will it rely on agency accounts?
