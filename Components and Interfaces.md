@@ -31,6 +31,10 @@
   * how to add new ones
   * how to edit scope and interfaces
 
+* Community Modules
+  * components and modules that are not currently maintained.
+  * expectation that it will be brought back into main ODC repository.
+
 * Release management
   * how to coordinate releases of stable code
   * small sub-committee tasked to do the necessary checks and balances
@@ -50,8 +54,24 @@
 * Index DB
 * Storage
 
-### Data Access
+A Driver consists of one index and one storage.
+
+### Data Query & Access
 * Uses Driver
+* Supports the following usage patterns:
+   * Immediate Query and Immediate Access
+	   - I want this data, and give me this data now.
+	   - (Datacube.find_datasets, Datacube.group_datasets, Datacube.load_data)
+   * Immediate Query and Deferred Retrieval
+	   - I want this data, and give me a descriptor about this data such that I can retrieve it later.
+	   - (Datacube.find_datasets, Datacube.group_datasets) + (Datacube.load_data)
+	   - (get_descriptor) + (get_data)
+   * Publish/subscribe updates
+	   - I want this data, send me updates.
+   * Request/poll updates
+	   - I want this data, send my any updates since last request.
+   * Export/convertion from source (db, storage) to target (db, storage) e.g. (postgres/netcdf) -> (postgres/s3)
+	   - the (db, storage) may potentially be a driver.
 
 ### Analytics
 * Analytics
