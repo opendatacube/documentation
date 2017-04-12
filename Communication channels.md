@@ -4,11 +4,25 @@ Use this document as a reference and guide to:
 * The type of communications channels available, and;
 * The recommended channel to use for a particular topic.
 
+##### Table of contents
+[Graphic](#graphic)  
+[Open Data Cube website](#website)  
+[Google groups](#googlegroups)  
+[Gmail](#gmail)  
+[Slack](#slack)  
+[GitHub](#github)  
+[ReadTheDocs](#readthedocs)  
+[Social media](#socialmedia)  
+
+<a name="graphic"/>
+
 ## Graphic
 1. Steve Ackerly and Alla to upload the latest version of the PNG graphic.
 2. Provide a link to the visio/gliffy file, or list who owns the file (e.g., Steve and Alla) so that we know who to contact if the graphic needs updating.
 
-## Open Data Cube Website
+<a name="website"/>
+
+## Open Data Cube website
 www.opendatacube.org
 
 (Also http://opendatacube.github.oi - should we use this as well / instead, or perhaps as the wiki end point?)
@@ -37,6 +51,8 @@ Past and upcoming, public and invited
 ### Private ODC docs
 Common, reusable and current presentation materials
 
+<a name="googlegroups"/>
+
 ## Google groups
 https://groups.google.com/forum/#!forum/opendatacube
 
@@ -52,6 +68,8 @@ Broad questions to the community.
 
 Technical questions can be sent here but slack preferred for a more timely response from developers.
 
+<a name="gmail"/>
+
 ## Gmail
 opendatacube@gmail.com
 * Read access restricted to moderator/admin members
@@ -63,6 +81,8 @@ Admin account for a number of these services
 
 Use google groups, slack or direct emails (e.g. to agency principals) to contact the community
 
+<a name="slack"/>
+
 ## Slack
 http://slack.com/opendatacube
 * Read and contribution access available to anyone after registration
@@ -71,6 +91,8 @@ http://slack.com/opendatacube
 ### Code discussions
 
 ### User support
+
+<a name="github"/>
 
 ## GitHub
 https://github.com/opendatacube
@@ -100,6 +122,8 @@ Community documents
 * Communication channels
 * FAQ (or should this be in readthedocs?)
 
+<a name="readthedocs"/>
+
 ## Read the docs
 http://datacube-core.readthedocs.io/en/latest/
 * Public read
@@ -110,6 +134,8 @@ http://datacube-core.readthedocs.io/en/latest/
 ### Install documentation
 
 ### Developer documentation
+
+<a name="socialmedia"/>
 
 ## Social media?
 * Not available presently
