@@ -1,4 +1,4 @@
-# Communications channels
+# Communication channels
 An overview and summary of the scope and options available for communicating with and within the Open Data Cube community.
 Use this document as a reference and guide to:
 * The type of communications channels available, and;
