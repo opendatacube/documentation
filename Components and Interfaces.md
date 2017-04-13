@@ -34,6 +34,7 @@
 * Community Modules
   * components and modules that are not currently maintained.
   * expectation that it will be brought back into main ODC repository.
+  * an example approach is geoserver, http://docs.geoserver.org/latest/en/developer/policies/community-modules.html
 
 * Release management
   * how to coordinate releases of stable code
