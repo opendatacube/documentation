@@ -102,7 +102,11 @@ A Driver consists of one index and one storage.
 Managed Replica Service: Client and server model with tracking
 
 Proposal state: Mature. The plan has been considered in the context of business and user requirements.
+
 Implementation state: Embyronic. Further detail requiried around functions and implementation specifics.
+> **Note:** There is a [simple replication utility](http://datacube-core.readthedocs.io/en/latest/ops/replication.html)
+>   that provides only an unmanaged ad-hoc replication, without any of the services or tracking capability. 
+>   It could be used as a discussion point when the managed replica client/server is implemented.
 
 Server:
 * tracks sub-cubes through linked data / provenance methods
