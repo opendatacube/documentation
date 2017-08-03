@@ -1,4 +1,4 @@
-# Mac and Hobrew build and install instructions
+# Mac and Homebrew build and install instructions
 
 ## Xcode command line tools
 1. http://developer.apple.com
