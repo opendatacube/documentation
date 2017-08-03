@@ -43,46 +43,71 @@ brew update  # a second time
 brew doctor  # best to fix any concerns before continuing
 ```
 
-## Packages
-Not all of these are critical bu they are handy.
+5. Set paths
+  * Mac OS X environment checks .bash_profile, .bash_login, .profile in this order. It will run whichever is the highest in the hierarchy so if you have .bash_profile it will not check .profile. https://stackoverflow.com/a/7376412
+  * If /etc/paths adds /usr/local/bin, put /usr/local/sbin here too.
+  * If /etc/paths and path_helper aren't valid then use this export:
 ```bash
-brew install python
-brew install homebrew/dupes/zlib
-brew install homebrew/science/hdf5
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH >> ~/.profile
+```
+  * Also note that Homebrew defines python2 and python3. Both can be used. 'python' will default to the system python. See https://docs.brew.sh/Homebrew-and-Python.html and https://github.com/Homebrew/homebrew-core/issues/15746.
+  * To make 'python' be one of the homebrew pythons use this export:
+```bash
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+```
+
+## Packages
+Not all of these are critical but they are handy.
+```bash
+brew install python2 (and/or python3, you can have both)
+brew install zlib
+brew install hdf5
 brew install homebrew/science/netcdf
 brew install geos
 brew install proj
 brew install imagemagick
 brew install homebrew/science/nco
-brew install gdal
+brew install gdal  # version 1.11.5
 brew install libyaml
+```
+To brew GDAL2, see https://www.karambelkar.info/2016/10/gdal-2-on-mac-with-homebrew/
+```bash
+mkdir -p /usr/local/lib/gdalplugins/2.2
+chmod -R 0777 /usr/local/lib/gdalplugins
+brew unlink gdal
+brew tap osgeo/osgeo4mac && brew tap --repair
+brew install jasper netcdf # gdal dependencies
+brew install gdal2 --with-armadillo --with-complete --with-libkml
+brew link --force gdal2
+gdal-config --version
 ```
 
 To Pip or Brew? Pip is preferred for python libs
 ```bash
-pip install --upgrade pip setuptools
-pip install nose
-pip install numpy
-pip install scipy
-pip install h5py
-pip install netCDF4
-pip install gdal=1.11.5  # version needs to match brew version
-pip install matplotlib
+# pip2 or pip3
+pip2 install --upgrade pip setuptools wheels
+pip2 install nose
+pip2 install numpy
+pip2 install scipy
+pip2 install h5py
+pip2 install netCDF4
+pip2 install gdal==1.11.5  # version needs to match brew version
+pip2 install matplotlib
 
 wget https://downloads.sourceforge.net/project/matplotlib/matplotlib-toolkits/basemap-1.0.7/basemap-1.0.7.tar.gz
 tar xzf basemap-1.0.7.tar.gz
 cd basemap-1.0.7
-pip install .
+pip2 install .
 
-pip install pyproj
-pip install pyshp
-pip install pydap
-pip install glueviz -- includes pands
-pip install pillow
-pip install shapely
+pip2 install pyproj
+pip2 install pyshp
+pip2 install pydap
+pip2 install glueviz -- includes pands
+pip2 install pillow
+pip2 install shapely
 
-pip install jupyter jupyterdrive
-pip install rasterio numexpr
+pip2 install jupyter jupyterdrive
+pip2 install rasterio numexpr
 ```
 
 Postgresql.app vs Brew? Both do a similar job > stick with brew
@@ -106,19 +131,28 @@ brew install postgis
   PostGIS extension modules installed to:
     /usr/local/share/postgresql/extension
 
-pip install psycopg2
+pip2 install psycopg2
+```
+
+## Virtual env
+* https://packaging.python.org/tutorials/installing-packages/#creating-virtual-environments
+```bash
+python3 -m venv --clear --system-site-packages 
+source [target-dir]/bin/activate
+...
+deactivate
 ```
 
 ## Datacube from pip
 ```bash
-pip install datacube -U gdal=1.11.5  # use gdal version that matches the brew version
+pip2 install datacube -U gdal=1.11.5  # use gdal version that matches the brew version
 ```
 
 If there are errors that relate to uninstalling a package from /Library/Python/2.7/site-packages, then either:
   * Use the [package]==[installed version] parameter to the datacube install command
   * Alternatively, use root to upgrade the package:
 ```bash
-sudo pip install [package] -U
+sudo pip2 install [package] -U
 ```
    This will have the side effect of removing it from /Library/Python/2.7/site-packages and putting it in /usr/local/ (for brew), but this is no problem if you’re using brew for most things (could symlink it back to /Library/Python/2.7/site-packages)
 
@@ -134,7 +168,7 @@ cd agdc-v2/
 
 python setup.py develop
 
-pip install pep8 pylint fiona
+pip2 install pep8 pylint fiona
 ./check_code.sh
 ```
 
