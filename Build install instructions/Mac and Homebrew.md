@@ -59,7 +59,7 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 ## Packages
 Not all of these are critical but they are handy.
 ```bash
-brew install python2 (and/or python3, you can have both)
+brew install python3 (and/or python2, you can have both)
 brew install zlib
 brew install hdf5
 brew install homebrew/science/netcdf
@@ -84,30 +84,33 @@ gdal-config --version
 
 To Pip or Brew? Pip is preferred for python libs
 ```bash
-# pip2 or pip3
-pip2 install --upgrade pip setuptools wheels
-pip2 install nose
-pip2 install numpy
-pip2 install scipy
-pip2 install h5py
-pip2 install netCDF4
-pip2 install gdal==1.11.5  # version needs to match brew version
-pip2 install matplotlib
+# pip3 or pip2
+pip3 install --upgrade pip setuptools wheels
+pip3 install nose
+pip3 install numpy
+pip3 install scipy
+pip3 install h5py
+pip3 install netCDF4
+pip3 install gdal==1.11.5  # version needs to match brew version
+pip3 install matplotlib
 
 wget https://downloads.sourceforge.net/project/matplotlib/matplotlib-toolkits/basemap-1.0.7/basemap-1.0.7.tar.gz
 tar xzf basemap-1.0.7.tar.gz
 cd basemap-1.0.7
-pip2 install .
+pip3 install .
 
-pip2 install pyproj
-pip2 install pyshp
-pip2 install pydap
-pip2 install glueviz -- includes pands
-pip2 install pillow
-pip2 install shapely
+pip3 install pyproj
+pip3 install pyshp
+pip3 install pydap
+pip3 install glueviz -- includes pands
+pip3 install pillow
+pip3 install shapely
 
-pip2 install jupyter jupyterdrive
-pip2 install rasterio numexpr
+pip3 install jupyter jupyterdrive
+pip3 install rasterio numexpr
+
+# For data cube
+pip3 install pep8 pylint fiona pycodestyle
 ```
 
 Postgresql.app vs Brew? Both do a similar job > stick with brew
@@ -131,13 +134,16 @@ brew install postgis
   PostGIS extension modules installed to:
     /usr/local/share/postgresql/extension
 
-pip2 install psycopg2
+pip3 install psycopg2
 ```
 
 ## Virtual env
 * https://packaging.python.org/tutorials/installing-packages/#creating-virtual-environments
 ```bash
-python3 -m venv --clear --system-site-packages 
+# Do once to set up the environment (target-dir)
+python3 -m venv --clear --system-site-packages [target-dir]
+
+# Do as required to connect and disconnect from the environment
 source [target-dir]/bin/activate
 ...
 deactivate
@@ -168,7 +174,6 @@ cd agdc-v2/
 
 python setup.py develop
 
-pip2 install pep8 pylint fiona
 ./check_code.sh
 ```
 
