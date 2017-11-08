@@ -85,7 +85,7 @@ gdal-config --version
 To Pip or Brew? Pip is preferred for python libs
 ```bash
 # pip3 or pip2
-pip3 install --upgrade pip setuptools wheels
+pip3 install --upgrade pip3 setuptools wheels
 pip3 install nose
 pip3 install numpy
 pip3 install scipy
@@ -102,7 +102,7 @@ pip3 install .
 pip3 install pyproj
 pip3 install pyshp
 pip3 install pydap
-pip3 install glueviz -- includes pands
+pip3 install glueviz  # includes pandas
 pip3 install pillow
 pip3 install shapely
 
@@ -151,14 +151,14 @@ deactivate
 
 ## Datacube from pip
 ```bash
-pip2 install datacube -U gdal=1.11.5  # use gdal version that matches the brew version
+pip3 install datacube -U gdal=1.11.5  # use gdal version that matches the brew version
 ```
 
 If there are errors that relate to uninstalling a package from /Library/Python/2.7/site-packages, then either:
   * Use the [package]==[installed version] parameter to the datacube install command
   * Alternatively, use root to upgrade the package:
 ```bash
-sudo pip2 install [package] -U
+sudo pip3 install [package] -U
 ```
    This will have the side effect of removing it from /Library/Python/2.7/site-packages and putting it in /usr/local/ (for brew), but this is no problem if youâ€™re using brew for most things (could symlink it back to /Library/Python/2.7/site-packages)
 
@@ -168,9 +168,9 @@ sudo chown -R [username] /usr/local/lib/python2.7/site-packages/  # so you donâ€
 
 ## Datacube from source
 ```bash
-cd /usr/local
-git clone https://github.com/data-cube/agdc-v2.git
-cd agdc-v2/
+cd [your-working-dir-for-code-repositories]/
+git clone https://github.com/opendatacube/datacube-core.git
+cd datacube-core/
 
 python setup.py develop
 
