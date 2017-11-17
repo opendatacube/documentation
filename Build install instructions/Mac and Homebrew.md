@@ -27,7 +27,7 @@ https://brew.sh
   * https://github.com/settings/tokens/new?scopes=&description=Homebrew
 ```bash
 echo 'export HOMEBREW_GITHUB_API_TOKEN="your_new_token"' >> ~/.bash_profile
-source ~/.bashrc
+source ~/.bash_profile
 ```
 
 3. Set directory permissions (optional)
