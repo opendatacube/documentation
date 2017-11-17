@@ -26,7 +26,7 @@ https://brew.sh
   * No github scopes required
   * https://github.com/settings/tokens/new?scopes=&description=Homebrew
 ```bash
-echo 'export HOMEBREW_GITHUB_API_TOKEN="your_new_token"' >> ~/.bashrc
+echo 'export HOMEBREW_GITHUB_API_TOKEN="your_new_token"' >> ~/.bash_profile
 source ~/.bashrc
 ```
 
@@ -48,11 +48,12 @@ brew doctor  # best to fix any concerns before continuing
   * If /etc/paths adds /usr/local/bin, put /usr/local/sbin here too.
   * If /etc/paths and path_helper aren't valid then use this export:
 ```bash
-export PATH=/usr/local/bin:/usr/local/sbin:$PATH >> ~/.profile
+export PATH=/usr/local/bin:/usr/local/sbin:$PATH >> ~/.bash_profile
 ```
   * Also note that Homebrew defines python2 and python3. Both can be used. 'python' will default to the system python. See https://docs.brew.sh/Homebrew-and-Python.html and https://github.com/Homebrew/homebrew-core/issues/15746.
   * To make 'python' be one of the homebrew pythons use this export:
 ```bash
+[optional]
 export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 ```
 
