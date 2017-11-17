@@ -33,6 +33,7 @@ source ~/.bash_profile
 3. Set directory permissions (optional)
   * Not critical for brew install but handy for apps that need to write to /usr/local
 ```bash
+[optional, may require https://apple.stackexchange.com/questions/208478]
 sudo chown <user>:admin /usr/local
 ```
 
