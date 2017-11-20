@@ -33,7 +33,7 @@ source ~/.bash_profile
 3. Set directory permissions (optional)
   * Not critical for brew install but handy for apps that need to write to /usr/local
 ```bash
-[optional, may require https://apple.stackexchange.com/questions/208478]
+[optional, may require SIP to be temporarily turned off, https://apple.stackexchange.com/questions/208478]
 sudo chown <user>:admin /usr/local
 ```
 
@@ -61,6 +61,7 @@ export PATH="/usr/local/opt/python/libexec/bin:$PATH"
 ## Packages
 Not all of these are critical but they are handy.
 ```bash
+# Packages can be combined into one line but its then harder to isolate and fix any errors
 brew install python3 (and/or python2, you can have both)
 brew install zlib
 brew install hdf5
@@ -88,7 +89,7 @@ gdal-config --version
 To Pip or Brew? Pip is preferred for python libs
 ```bash
 # pip3 or pip2
-# packages can be combined into one line but its then harder to isolate and fix any errors
+# Packages can be combined into one line but its then harder to isolate and fix any errors
 # --upgrade is for convenience only
 pip3 install --upgrade setuptools
 pip3 install --upgrade nose
