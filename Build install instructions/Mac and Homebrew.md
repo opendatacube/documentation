@@ -64,13 +64,14 @@ Not all of these are critical but they are handy.
 brew install python3 (and/or python2, you can have both)
 brew install zlib
 brew install hdf5
-brew install homebrew/science/netcdf
+brew install netcdf
 brew install geos
 brew install proj
 brew install imagemagick
-brew install homebrew/science/nco
-brew install gdal  # version 1.11.5
+brew install homebrew/science/nco  # requires java
+#brew install gdal  # version 1.11.5
 brew install libyaml
+brew install wget  # or curl if you prefer
 ```
 To brew GDAL2, see https://www.karambelkar.info/2016/10/gdal-2-on-mac-with-homebrew/
 ```bash
@@ -87,32 +88,35 @@ gdal-config --version
 To Pip or Brew? Pip is preferred for python libs
 ```bash
 # pip3 or pip2
-pip3 install --upgrade pip3 setuptools wheels
-pip3 install nose
-pip3 install numpy
-pip3 install scipy
-pip3 install h5py
-pip3 install netCDF4
-pip3 install gdal==1.11.5  # version needs to match brew version
-pip3 install matplotlib
+# packages can be combined into one line but its then harder to isolate and fix any errors
+# --upgrade is for convenience only
+pip3 install --upgrade setuptools
+pip3 install --upgrade nose
+pip3 install --upgrade numpy
+pip3 install --upgrade scipy
+pip3 install --upgrade h5py
+pip3 install --upgrade netCDF4
+pip3 install --upgrade gdal==2.2.2  # version needs to match brew version, e.g. 1.11.5 if using standard brew
+pip3 install --upgrade matplotlib
 
 wget https://downloads.sourceforge.net/project/matplotlib/matplotlib-toolkits/basemap-1.0.7/basemap-1.0.7.tar.gz
 tar xzf basemap-1.0.7.tar.gz
 cd basemap-1.0.7
 pip3 install .
 
-pip3 install pyproj
-pip3 install pyshp
-pip3 install pydap
-pip3 install glueviz  # includes pandas
-pip3 install pillow
-pip3 install shapely
+pip3 install --upgrade pyproj
+pip3 install --upgrade pyshp
+pip3 install --upgrade pydap
+pip3 install --upgrade glueviz  # includes pandas
+pip3 install --upgrade pillow
+pip3 install --upgrade shapely
 
-pip3 install jupyter jupyterdrive
-pip3 install rasterio numexpr
+pip3 install --upgrade jupyter jupyterdrive
+pip3 install --upgrade rasterio numexpr
 
 # For data cube
-pip3 install pep8 pylint fiona pycodestyle
+pip3 install --upgrade pep8 pylint fiona pycodestyle
+pip3 install --upgrade pytest ptest-cov hypothesis mock
 ```
 
 Postgresql.app vs Brew? Both do a similar job > stick with brew
@@ -153,7 +157,7 @@ deactivate
 
 ## Datacube from pip
 ```bash
-pip3 install datacube -U gdal=1.11.5  # use gdal version that matches the brew version
+pip3 install datacube -U gdal=2.2.2  # use gdal version that matches the brew version, e.g. 1.11.5 if using standard brew
 ```
 
 If there are errors that relate to uninstalling a package from /Library/Python/2.7/site-packages, then either:
@@ -174,7 +178,7 @@ cd [your-working-dir-for-code-repositories]/
 git clone https://github.com/opendatacube/datacube-core.git
 cd datacube-core/
 
-python setup.py develop
+python3 setup.py develop
 
 ./check_code.sh
 ```
