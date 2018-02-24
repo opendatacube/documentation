@@ -118,6 +118,7 @@ pip3 install --upgrade rasterio numexpr
 # For data cube
 pip3 install --upgrade pep8 pylint fiona pycodestyle
 pip3 install --upgrade pytest ptest-cov hypothesis mock
+pip3 install --upgrade yamllint
 ```
 
 Postgresql.app vs Brew? Both do a similar job > stick with brew
