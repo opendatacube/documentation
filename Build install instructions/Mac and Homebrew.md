@@ -153,10 +153,15 @@ python3 -m venv --clear --system-site-packages [target-dir]
 # Do as required to connect and disconnect from the environment
 source [target-dir]/bin/activate
 ...
+[build or install datacube, see below]
+[use datacube]
+...
 deactivate
 ```
 
-## Datacube from pip
+## (Either, for reference) Datacube from pip
+We prefer to build from source (see below).
+
 ```bash
 pip3 install datacube -U gdal=2.2.2  # use gdal version that matches the brew version, e.g. 1.11.5 if using standard brew
 ```
@@ -173,12 +178,18 @@ sudo pip3 install [package] -U
 sudo chown -R [username] /usr/local/lib/python2.7/site-packages/  # so you don’t need to be root for future pip updates.
 ```
 
-## Datacube from source
+## (Or, preferred) Datacube from source
+The 
+
 ```bash
 cd [your-working-dir-for-code-repositories]/
 git clone https://github.com/opendatacube/datacube-core.git
-cd datacube-core/
 
+# Install all dependencies, some of which are for testing only but no harm having them all
+git clone https://github.com/opendatacube/documentation.git
+python3 documentation/Build\ install\ instructions/pip_from_travis.py datacube-core/.travis/environment.yaml  
+
+cd datacube-core/
 python3 setup.py develop
 
 ./check_code.sh
