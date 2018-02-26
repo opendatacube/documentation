@@ -180,20 +180,33 @@ sudo chown -R [username] /usr/local/lib/python2.7/site-packages/  # so you donâ€
 ```
 
 ## (Or, preferred) Datacube from source
-The 
-
 ```bash
 cd [your-working-dir-for-code-repositories]/
 git clone https://github.com/opendatacube/datacube-core.git
 
 # Install all dependencies, some of which are for testing only but no harm having them all
+
 git clone https://github.com/opendatacube/documentation.git
 python3 documentation/Build\ install\ instructions/pip_from_travis.py datacube-core/.travis/environment.yaml  
+
+# Install datacube, and check
 
 cd datacube-core/
 python3 setup.py develop
 
 ./check_code.sh
+```
+
+If check_code.sh fails then investigate the cause. Errors will often be due a missing python module or library, in which case add the missing module or libary via brew or pip3 as appropriate.
+
+We have also noticed that the test/test_geometry.py script can crash python, presumably due to an out-of-memory (or similar) error when linking with GDAL. This may be fixed in future versions of brew gdal or it could be an opendatacube issue. The work-around is to mark the particular test to be skipped if the GDAL version is not met.
+
+```
+# Replace:
+@pytest.mark.xfail(tuple(int(i) for i in osgeo.__version__.split('.')) < (2, 2), reason='Fails under GDAL 2.1')
+
+# With (note the osgeo version is changed to cover the version installed above):
+@pytest.mark.skipif(tuple(int(i) for i in osgeo.__version__.split('.')) <= (2, 3), reason='Fails under GDAL 2.1')
 ```
 
 # Configure DB
