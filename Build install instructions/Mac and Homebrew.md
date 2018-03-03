@@ -199,6 +199,38 @@ python3 setup.py develop
 
 If check_code.sh fails then investigate the cause. Errors will often be due a missing python module or library, in which case add the missing module or libary via brew or pip3 as appropriate.
 
+The error message should show which test file failed. Using the same pytest parameters, check the test file and each of the functions to identify the fault. For example,
+
+```
+# Run all tests in a particular file
+> pytest -r a --cov datacube --doctest-ignore-import-errors --durations=5 tests/test_geometry.py
+tests/test_geometry.py ...........Abort trap: 6
+
+> grep def tests/test_geometry.py
+def test_pickleable():
+def test_geobox_simple():
+def test_props():
+def test_tests():
+def test_ops():
+def test_unary_union():
+def test_unary_intersection():
+    def test_sinusoidal_comparison(self):
+        c = geometry.CRS('+a=6371007.181 +b=6371007.181 +units=m +y_0=0 +proj=sinu +lon_0=0 +no_defs +x_0=0')
+    def test_grs80_comparison(self):
+        c = geometry.CRS('+proj=longlat +no_defs +ellps=GRS80')
+    def test_australian_albers_comparison(self):
+def test_geobox():
+def test_wrap_dateline():
+def test_3d_geometry_converted_to_2d_geometry():
+
+# Test each function in a specific file
+> pytest -r a --cov datacube --doctest-ignore-import-errors --durations=5 tests/test_geometry.py::test_geobox
+tests/test_geometry.py .
+
+> pytest -r a --cov datacube --doctest-ignore-import-errors --durations=5 tests/test_geometry.py::test_wrap_dateline
+tests/test_geometry.py Segmentation fault: 11
+```
+
 We have also noticed that the test/test_geometry.py script can crash python, presumably due to an out-of-memory (or similar) error when linking with GDAL. This may be fixed in future versions of brew gdal or it could be an opendatacube issue. The work-around is to mark the particular test to be skipped if the GDAL version is not met.
 
 ```
