@@ -105,6 +105,14 @@ tar xzf basemap-1.0.7.tar.gz
 cd basemap-1.0.7
 pip3 install .
 
+# basemap may file with newer versions of CLTools/brew. The problem may be related to
+# https://github.com/jswhit/pyproj/issues/136
+# which basically says that the _proj.c distributed by pip needs to be rebuilt.
+# Do this by using git rather than pip
+pip3 install -U cython  # lastest version
+pip3 install git+https://github.com/jswhit/pyproj.git
+pip3 install git+https://github.com/matplotlib/basemap.git
+
 pip3 install --upgrade pyproj
 pip3 install --upgrade pyshp
 pip3 install --upgrade pydap
