@@ -91,14 +91,16 @@ To Pip or Brew? Pip is preferred for python libs
 # pip3 or pip2
 # Packages can be combined into one line but its then harder to isolate and fix any errors
 # --upgrade is for convenience only
-pip3 install --upgrade setuptools
-pip3 install --upgrade nose
-pip3 install --upgrade numpy
-pip3 install --upgrade scipy
-pip3 install --upgrade h5py
-pip3 install --upgrade netCDF4
-pip3 install --upgrade gdal==2.2.2  # version needs to match brew version, e.g. 1.11.5 if using standard brew
-pip3 install --upgrade matplotlib
+pip3 install -U setuptools
+pip3 install -U nose
+pip3 install -U numpy
+pip3 install -U scipy
+pip3 install -U h5py
+pip3 install -U netCDF4
+pip3 install -U gdal==2.2.2  # version needs to match brew version, e.g. 1.11.5 if using standard brew
+pip3 install -U matplotlib
+pip3 install -U rasterio numexpr
+pip3 install -U pillow
 
 wget https://downloads.sourceforge.net/project/matplotlib/matplotlib-toolkits/basemap-1.0.7/basemap-1.0.7.tar.gz
 tar xzf basemap-1.0.7.tar.gz
@@ -108,25 +110,25 @@ pip3 install .
 # basemap may fail with newer versions of CLTools/brew. The problem may be related to
 # https://github.com/jswhit/pyproj/issues/136
 # which basically says that the _proj.c distributed by pip needs to be rebuilt.
-# Do this by using git rather than pip
-pip3 install -U cython  # lastest version
-pip3 install git+https://github.com/jswhit/pyproj.git
-pip3 install git+https://github.com/matplotlib/basemap.git
+# Two options: 1) Use --no-binary option which forces recompiling, or 2) Use git rather than pip.
+# Git options is like: pip3 install git+https://github.com/matplotlib/basemap.git
 
-pip3 install --upgrade pyproj
-pip3 install --upgrade pyshp
-pip3 install --upgrade pydap
-pip3 install --upgrade glueviz  # includes pandas
-pip3 install --upgrade pillow
-pip3 install --upgrade shapely
+pip3 install -U --no-binary cython
+pip3 install -U --no-binary pyproj
+pip3 install -U --no-binary shapely
+pip3 install -U --no-binary basemap
+pip3 install -U --no-binary Cartopy  # optional
 
-pip3 install --upgrade jupyter jupyterdrive
-pip3 install --upgrade rasterio numexpr
+pip3 install -U pyshp   # optional
+pip3 install -U pydap  # optional
+pip3 install -U glueviz  # includes pandas
+
+pip3 install -U jupyter
 
 # For data cube
-pip3 install --upgrade pep8 pylint fiona pycodestyle
-pip3 install --upgrade pytest ptest-cov hypothesis mock
-pip3 install --upgrade yamllint
+pip3 install -U pep8 pylint fiona pycodestyle
+pip3 install -U pytest ptest-cov hypothesis mock
+pip3 install -U yamllint
 ```
 
 Postgresql.app vs Brew? Both do a similar job > stick with brew
