@@ -159,7 +159,7 @@ Check and access the postgres server
 ```bash
 brew services list  # To ensure postgres has started turned on, else see above
 
-psql  # To log directly in with default user
+psql [database]  # To log directly in with default user
 
 createuser  # If you need to create a user
 
