@@ -155,6 +155,18 @@ brew install postgis
 pip3 install psycopg2
 ```
 
+Check and access the postgres server
+```bash
+brew services list  # To ensure postgres has started turned on, else see above
+
+psql  # To log directly in with default user
+
+createuser  # If you need to create a user
+
+psql --help  # To see the default values
+```
+
+
 ## Virtual env
 * https://packaging.python.org/tutorials/installing-packages/#creating-virtual-environments
 ```bash
